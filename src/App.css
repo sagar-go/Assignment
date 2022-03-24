@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body{
+  scroll-behavior: smooth;
+}
+section {
+  height: 40vh;
+  width: 100%;
+  background-color: mediumseagreen;
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section img {
+  object-fit: contain;
+  height: 23%;
+  width: 14%;
+  margin-left: 1%;
+  margin-top: 3%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sec1 {
+  height: 100vh;
+  max-width: 100%;
+  /* background: #F2F2FC; */
+  background: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: 2;
+  overflow: hidden;
+}
+.right,
+.left {
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+}
+.sec1 .right {
+  display: flex;
+  justify-content: end;
+  padding-top: 8%;
+}
+.right img {
+  height: 98%;
+  width: 59%;
+}
+.left {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  font-family: "Ek Mukta", sans-serif;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 10%;
+ 
+}
+.left h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+.left p {
+  font-size: 2rem;
+}
+.left button {
+  border: none;
+  padding: 1.5%;
+  background: mediumseagreen;
+  width: 25%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.left button:hover{
+
+    box-shadow: inset 200px 0 0 0 black;
+    color: white;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.nav {
+  height: 10vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+padding:0 0 0 5%;
+position: fixed;
+z-index: 5;
+color:white;
+width: 100%;
+}
+
+.nav2{
+  background-color: #3CB371;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+padding:0 0 0 5%;
+position: fixed;
+z-index: 5;
+color:white;
+width: 100%;
+}
+
+.nav img,.nav2 img {
+  height: 65%;
+  width: 20%;
+  object-fit: contain;
+}
+
+.nav ul, .nav2 ul {
+  display: flex;
+  width: 35%;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+/* font-family: 'Quicksand', sans-serif; */
+}
+li,a {
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.5s ease-in-out;
+  background-position-x: left;
+  border-bottom: 2px solid transparent;
+  border-width: 0%;
+  position: relative;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+li::after {
+  content: " ";
+  width: 0%;
+  background-color: rgb(252, 252, 252);
+  position: absolute;
+  height: 2.5px;
+  left: 0;
+  bottom: 0px;
+  background-position-x: left;
+  transition: 0.3s linear;
+}
+li:hover::after{
+ width: 100%;
+ background-position-x: left;
+}
+.sec2{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4FC;
+  z-index: 100;
+}
+svg{
+  position: absolute;
+}
+.phone {
+  display: flex;
+  height: 7vh;
+  width: 20%;
+  position: absolute;
+  bottom: 11%;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone span{
+  font-size: 25px;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16vh;
+  background-image: url(https://blog.close.com/content/images/2020/05/edtech2-copy.jpg);
+  background-size: cover;
+  background-position: right;
+  background-color: rgba(0,0,0,0.2);
+  background-blend-mode: multiply;
+  flex-direction: column;
+
+}
+.wrapper {
+  padding: 3% 0%;
+  width: 30%;
+  background-color: white;
+  width: 40%;
+  height: 76vh;
+}
+
+.wrapper button {
+  position: absolute;
+  bottom: 14%;
+  left: 43%;
+  width: 14%;
+  border: none;
+  outline: none;
+  padding: 0.6%;
+  background: teal;
+  color: white;
+  font-size: 1rem;
+}
+
+
+.wrapper2 button {
+  position: absolute;
+  bottom: 24%;
+  left: 43%;
+  width: 14%;
+  border: none;
+  outline: none;
+  padding: 0.6%;
+  background: teal;
+  color: white;
+  font-size: 1rem;
+}
+
+.errmsg2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-left: 22%;
+  margin-top: 2%;
+  color: red;
+}
+
+.errmsg {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-left: 22%;
+  margin-top: 2%;
+  color: red;
+visibility: hidden;
+}
+
+
+.wrapper2 {
+  padding: 3% 0%;
+  width: 30%;
+  background-color: white;
+  width: 39%;
+  height: 67vh;
+  /* border-radius: 31px; */
+}
+.container h1{
+  text-align: center;
+font-size: 2.5rem;
+font-weight: 800;
+margin-bottom: 10px;
+}
+form{
+  padding: 15px 30px;
+display: flex;
+flex-wrap: wrap;
+
+}
+.container span{
+  font-size: 12px;
+margin: 20px 0px;
+}
+.signin {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10%;
+}
+
+.container input {
+  border: none;
+  border-bottom: 1px outset black;
+  outline: none;
+  flex: 1 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+  /* background: transparent; */
+  font-size: 1rem;
+  /* border-radius: 5px; */
+}
+.profile{
+  display: flex;
+}
+.profile .left2, .profile .right{
+  width: 50%;
+  height: 100vh;
+}
+.left2 h2{
+  width: 30%;
+}
+.card{
+  padding:5%
+}
+.right img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.left2{
+  background-color: #A07CEA;
 }
